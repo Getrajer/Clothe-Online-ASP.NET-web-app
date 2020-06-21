@@ -1,0 +1,12 @@
+﻿#product-details{
+    margin-top:15em;
+}
+
+
+.carousel-item {
+    max-height: 50em;
+}
+
+.img-carousel{
+    max-height:100%;
+}

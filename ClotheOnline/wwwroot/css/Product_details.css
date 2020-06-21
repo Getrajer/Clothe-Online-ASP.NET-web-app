@@ -1,0 +1,179 @@
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff5e00;
+}
+
+
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+#product {
+  margin: 5em 0 5em 0;
+  padding: 0 5em;
+  font-size: 1.1rem;
+}
+
+#product .img-container {
+  max-height: 60em;
+  padding: 0 0 0 10em;
+  width: auto;
+  text-align: right;
+}
+
+#product .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#product .desc-container {
+  padding: 0 1em;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#product .description, #product .param-container, #product .stock, #product .btn-container {
+  padding: 1em 0;
+}
+
+#product .btn-b {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  padding: 0 0.6em;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#product .btn-b:hover {
+  background-color: #ff5e00;
+}
+
+@media only screen and (max-width: 1200px) {
+  #product {
+    padding: 0 1em;
+    font-size: 1rem;
+  }
+  #product .img-container {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #product {
+    padding: 0 8em;
+    font-size: 1rem;
+  }
+  #product .img-container {
+    height: 500px;
+    padding: 0;
+  }
+  #product .img-container img {
+    width: 100%;
+    min-height: 500px;
+  }
+  #product .desc-container {
+    margin-top: 1em;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #product {
+    padding: 0 6em;
+  }
+  #product .desc-container {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #product {
+    padding: 0 3em;
+  }
+  #product .desc-container {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #product {
+    padding: 0 1em;
+  }
+  #product .img-container {
+    max-height: none;
+    width: 100%;
+  }
+  #product .img-container img {
+    max-height: none;
+    width: 100%;
+  }
+  #product .desc-container {
+    margin-top: 1em;
+  }
+}
+
+#social-media {
+  padding: 0.5em;
+  background-color: #0a0a0a;
+  color: #ff5e00;
+}
+
+#social-media .icon {
+  padding: 0.3em 4em 0.3em 4em;
+}
+
+#social-media i {
+  font-size: 1.5rem;
+}
+
+#social-media i:hover {
+  color: gold;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #social-media .icon {
+    padding: 0.3em 1.5em 0.3em 1.5em;
+  }
+}
+
+footer {
+  padding: 1em 0.3em;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+footer .clothe {
+  font-family: 'Lakki Reddy', cursive;
+}
+/*# sourceMappingURL=Product_details.css.map */

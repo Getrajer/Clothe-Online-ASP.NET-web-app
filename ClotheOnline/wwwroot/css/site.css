@@ -1,0 +1,79 @@
+﻿body {
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: goldenrod;
+}
+
+.navbar {
+  background-color: white;
+  min-height: 3em;
+  color: black;
+}
+
+.navbar a {
+  color: black;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  color: gold;
+}
+
+.navbar .navbar-brand {
+  color: gold;
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 1.5rem;
+}
+
+
+#social-media {
+  padding: 0.5em;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+#social-media .icon {
+  padding: 0.3em 4em 0.3em 4em;
+}
+
+#social-media i {
+  font-size: 1rem;
+}
+
+#social-media i:hover {
+  color: gold;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #social-media .icon {
+    padding: 0.3em 1.5em 0.3em 1.5em;
+  }
+}
+
+footer {
+  padding: 0.5em;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+footer .clothe {
+  font-family: 'Lakki Reddy', cursive;
+}

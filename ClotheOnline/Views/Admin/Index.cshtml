@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+
+<head>
+    <link href="~/css/admin_style.css" rel="stylesheet" />
+</head>
+
+<div id="admin_options">
+    <h1 class="text-center">Admin Options</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <a asp-controller="products" asp-action="Create" class="btn btn-info">Create Item</a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a asp-controller="Administration" asp-action="CreateRole" class="btn btn-info">Create Role</a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a asp-controller="Administration" asp-action="ListRoles" class="btn btn-info">See all roles</a>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">XS Quantity</th>
+            <th scope="col">S Quantity</th>
+            <th scope="col">M Quantity</th>
+            <th scope="col">L Quantity</th>
+            <th scope="col">XL Quantity</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+
+    @foreach (var p in Model)
+    {
+        <tbody>
+            <tr>
+                <th scope="row">@p.Id</th>
+                <td>@p.Name</td>
+                <td>@p.Category</td>
+                <td>@p.xsQuantity</td>
+                <td>@p.sQuantity</td>
+                <td>@p.mQuantity</td>
+                <td>@p.lQuantity</td>
+                <td>@p.xlQuantity</td>
+                <td>
+                    <a asp-controller="products" asp-action="Delete" asp-route-id="@p.Id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
+                    <a asp-controller="products" asp-action="Edit" asp-route-id="@p.Id" class="btn btn-info">Edit</a>
+                </td>
+                <td>
+                    <a asp-controller="products" asp-action="ProductDetails" asp-route-id="@p.Id" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
+
+

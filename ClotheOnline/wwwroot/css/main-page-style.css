@@ -1,0 +1,500 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff5e00;
+}
+
+.col-md-4 {
+  margin: 0;
+  padding: 0;
+}
+
+.col-md-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.col-lg-4 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: white;
+  min-height: 3em;
+  color: black;
+}
+
+.navbar a {
+  color: black;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  color: #ff5e00;
+}
+
+.navbar .navbar-brand {
+  color: #ff5e00;
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1800px) {
+  .main {
+    padding: 0 4em;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .main {
+    padding: 0 8em;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  .main {
+    padding: 0 12em;
+  }
+}
+
+@media only screen and (min-width: 2900px) {
+  .main {
+    padding: 0 16em;
+  }
+}
+
+@media only screen and (min-width: 3300px) {
+  .main {
+    padding: 0 22em;
+  }
+}
+
+@media only screen and (min-width: 3600px) {
+  .main {
+    padding: 0 25em;
+  }
+}
+
+@media only screen and (min-width: 4000px) {
+  .main {
+    padding: 0 35em;
+  }
+}
+
+header {
+  margin-top: 3em;
+}
+
+header .carousel-item {
+  height: 90vh;
+  background: no-repeat center scroll;
+  background-size: contain;
+}
+
+header .carousel-item img {
+  height: auto;
+}
+
+@media only screen and (max-width: 763px) {
+  header .carousel-item {
+    min-height: 20em;
+    background: no-repeat center scroll;
+    background-size: contain;
+  }
+  header .carousel-item img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+#products-nav {
+  background-color: #0a0a0a;
+  color: #ff5e00;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+#products-nav .col-12 {
+  margin: 0;
+  padding: 0;
+}
+
+#products-nav a {
+  font-size: 1rem;
+  padding: 0 0.5em;
+}
+
+#products-nav a:hover {
+  color: gold;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+#main-container {
+  padding: 0 9em;
+}
+
+@media only screen and (max-width: 1500px) {
+  #main-container {
+    padding: 0 6em;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #main-container {
+    padding: 0 5em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #main-container {
+    padding: 0 4em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #main-container {
+    padding: 0 3em;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #main-container {
+    padding: 0 2em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #main-container {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #main-container {
+    padding: 0 8em;
+  }
+}
+
+@media only screen and (max-width: 891px) {
+  #main-container {
+    padding: 0 7em;
+  }
+}
+
+@media only screen and (max-width: 691px) {
+  #main-container {
+    padding: 0 5em;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  #main-container {
+    padding: 0 3em;
+  }
+}
+
+@media only screen and (max-width: 491px) {
+  #main-container {
+    padding: 0 2em;
+  }
+}
+
+.title .title-container {
+  margin: 0;
+}
+
+.title .title-container h1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.underline-container {
+  width: 100%;
+  padding-right: 50%;
+}
+
+.underline-container .underline {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-top: 0.3em;
+}
+
+#newest-products {
+  margin-top: 5em;
+}
+
+#newest-products .products-container {
+  margin-top: 5em;
+  padding: 2em 0;
+}
+
+#newest-products .product-img {
+  padding: 0;
+  max-height: 40em;
+  width: 100%;
+  background-color: white;
+}
+
+#newest-products .product-img img {
+  height: 40em;
+  width: 100%;
+}
+
+#newest-products .swiper-container {
+  height: 100%;
+}
+
+#newest-products .product {
+  color: #0a0a0a;
+  margin-bottom: 1em;
+  padding: 0 2em;
+}
+
+#newest-products .product p {
+  padding: 0;
+  margin: 0;
+}
+
+#newest-products .product-desc {
+  padding: 0.5em 0;
+}
+
+#newest-products .p-btn {
+  margin-top: 0.5em;
+  font-weight: 400;
+  color: #ff5e00;
+  padding: 0.1em;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#newest-products .p-btn:hover {
+  color: #ffd900;
+}
+
+#brands {
+  margin-top: 5em;
+}
+
+#brands .brands-container {
+  margin-top: 5em;
+  padding: 2em 0;
+}
+
+#brands .brand {
+  min-height: 30em;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin: 2em 0;
+}
+
+#brands .brand:hover {
+  cursor: pointer;
+}
+
+#brands .brand .brand-name {
+  font-size: 2rem;
+  padding-top: 7em;
+}
+
+#brands .brand .brand-name h1 {
+  font-family: 'Lakki Reddy', cursive;
+  color: white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 1;
+  font-weight: 600;
+}
+
+#brands .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#brands .overlay:hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: rgba(253, 231, 133, 0.342);
+}
+
+#brands .yelloo {
+  background-image: url(../pictures/yellow.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#brands .redoo {
+  background-image: url(../pictures/red.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#brands .blackoo {
+  background-image: url(../pictures/black-shirt.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#brands .greenoo {
+  background-image: url(../pictures/green-dress.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#brands .pinkoo {
+  background-image: url(../pictures/pink.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#brands .purpleoo {
+  background-image: url(../pictures/purple.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#special-offers {
+  margin-top: 5em;
+  background-color: #0a0a0a;
+}
+
+#special-offers .offers-container {
+  margin-top: 5em;
+  padding: 2em 15em;
+}
+
+#special-offers .col-lg-4, #special-offers .col-lg-8 {
+  padding: 0;
+}
+
+#special-offers .percentage-offers, #special-offers .purchase-offers {
+  min-height: 30em;
+  padding: 0;
+}
+
+#special-offers .percentage-offers {
+  background-image: url(../pictures/happy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#special-offers .purchase-offers {
+  background-image: url(../pictures/friends.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#special-offers .text-container {
+  padding-top: 14em;
+  color: #e0e0e0;
+  font-family: 'Lakki Reddy', cursive;
+}
+
+#special-offers .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+#special-offers .overlay:hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: rgba(253, 231, 133, 0.26);
+}
+
+@media only screen and (max-width: 1400px) {
+  #special-offers .offers-container {
+    padding: 2em 12em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #special-offers .offers-container {
+    padding: 2em 9em;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #special-offers .offers-container {
+    padding: 2em 5em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #special-offers .offers-container {
+    padding: 2em 2em;
+  }
+}
+
+#social-media {
+  padding: 0.5em;
+  background-color: #0a0a0a;
+  color: #ff5e00;
+}
+
+#social-media .icon {
+  padding: 0.3em 4em 0.3em 4em;
+}
+
+#social-media i {
+  font-size: 1.5rem;
+}
+
+#social-media i:hover {
+  color: gold;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #social-media .icon {
+    padding: 0.3em 1.5em 0.3em 1.5em;
+  }
+}
+
+footer {
+  padding: 1em 0;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+footer .clothe {
+  font-family: 'Lakki Reddy', cursive;
+  color: #ff5e00;
+}
+/*# sourceMappingURL=style.css.map */

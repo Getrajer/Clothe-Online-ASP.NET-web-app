@@ -1,0 +1,219 @@
+﻿@model ProductEditViewModel
+@{
+    ViewData["Title"] = "Edit";
+    var photoPath = "~/images/" + (Model.ExistingPhotoPath1 ?? "noimage.jpeg");
+    var photoPath2 = "~/images/" + (Model.ExistingPhotoPath2 ?? "noimage.jpeg");
+    var photoPath3= "~/images/" + (Model.ExistingPhotoPath3 ?? "noimage.jpeg");
+}
+
+
+<head><link href="~/css/create.css" rel="stylesheet"/></head>
+
+<h1>Create</h1>
+
+<div class="row">
+    <div class="form-container card col-12">
+
+        <form enctype="multipart/form-data" asp-controller="Products" asp-action="edit" method="post" class="mt-3">
+
+            <input hidden asp-for="Id" />
+            <input hidden asp-for="ExistingPhotoPath1" />
+            <input hidden asp-for="ExistingPhotoPath2" />
+            <input hidden asp-for="ExistingPhotoPath3" />
+
+
+
+            <div class="form-group row">
+                <label asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" placeholder="Name" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Category"></label>
+                <select class="form-control" asp-for="Category" asp-items="Html.GetEnumSelectList<Categories>()"></select>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Price"></label>
+                <input class="form-control" asp-for="Price" placeholder="Price" />
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="xsQuantity"></label>
+                <input class="form-control" asp-for="xsQuantity" placeholder="xsQuantity" />
+                <span class="text-danger" asp-validation-for="xsQuantity"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="sQuantity"></label>
+                <input class="form-control" asp-for="sQuantity" placeholder="sQuantity" />
+                <span class="text-danger" asp-validation-for="sQuantity"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="mQuantity"></label>
+                <input class="form-control" asp-for="mQuantity" placeholder="mQuantity" />
+                <span class="text-danger" asp-validation-for="mQuantity"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="lQuantity"></label>
+                <input class="form-control" asp-for="lQuantity" placeholder="lQuantity" />
+                <span class="text-danger" asp-validation-for="lQuantity"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="xlQuantity"></label>
+                <input class="form-control" asp-for="xlQuantity" placeholder="xlQuantity" />
+                <span class="text-danger" asp-validation-for="xlQuantity"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Brand"></label>
+                <input class="form-control" asp-for="Brand" placeholder="Brand" />
+                <span class="text-danger" asp-validation-for="Brand"></span>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="DateOfProduction"></label>
+                <input class="form-control" asp-for="DateOfProduction"  placeholder="DateOfProduction"/>
+                <span class="text-danger" asp-validation-for="DateOfProduction"></span>
+            </div>
+
+
+            <div class="form-group row">
+                <label asp-for="Description"></label>
+                <textarea class="form-control" asp-for="Description" placeholder="Description"></textarea>
+                <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+
+
+
+            @{
+                //This is for 1st photo
+                if (Model.ExistingPhotoPath1 != null)
+                {
+                    <div class="form-group row col-sm-4 offset-4">
+                        <img class="imgeThumbnail" asp-append-version="true" src="@photoPath" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo" class="form-control custom-file-input">
+                                <label class="custom-file-label">Change Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group row">
+                        <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo" class="form-control custom-file-input">
+                                <label class="custom-file-label">Add Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+
+            @{
+                //This is for 3rd photo
+                if (Model.ExistingPhotoPath2 != null)
+                {
+                    <div class="form-group row col-sm-4 offset-4">
+                        <img class="imgeThumbnail" asp-append-version="true" src="@photoPath2" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Photo2" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo2" class="form-control custom-file-input">
+                                <label class="custom-file-label">Change Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group row">
+                        <label asp-for="Photo2" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo2" class="form-control custom-file-input">
+                                <label class="custom-file-label">Add Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+
+
+            @{
+                //This is for 2nd photo
+                if (Model.ExistingPhotoPath3 != null)
+                {
+                    <div class="form-group row col-sm-4 offset-4">
+                        <img class="imgeThumbnail" asp-append-version="true" src="@photoPath3" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Photo3" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo3" class="form-control custom-file-input">
+                                <label class="custom-file-label">Change Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group row">
+                        <label asp-for="Photo3" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <div class="custom-file">
+                                <input asp-for="Photo3" class="form-control custom-file-input">
+                                <label class="custom-file-label">Add Photo</label>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+            <div class="form-group row">
+                <div class="form-group row">
+                    <button class="btn btn-success" type="submit">Edit Product</button>
+                    <a class="btn btn-danger" asp-controller="Admin" asp-action="Index">Cancel</a>
+                </div>
+            </div>
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            @section Scripts {
+                <script>
+                    $(document).ready(function () {
+                        $('.custom-file-input').on("change", function () {
+                            var fileName = $(this).val().split("\\").pop();
+                            $(this).next('.custom-file-label').html(fileName);
+                        });
+                    });
+                </script>
+            }
+
+        </form>
+    </div>
+
+</div>

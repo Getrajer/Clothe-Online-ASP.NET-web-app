@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link href="~/css/Products.css" rel="stylesheet" />
+</head>
+
+@{ 
+    var o = Model;
+}
+
+
+
+
+<div id="main">
+
+    <section id="products">
+        <div class="title-container row">
+            <div class="col-12">
+                <h1>All Products</h1>
+            </div>
+            <div class="underline-container">
+                <div class="underline"></div>
+            </div>
+        </div>
+
+        <div class="products-container">
+            <div class="row">
+                @foreach (var p in Model)
+                {
+                    @Html.Partial("_PartialProduct", p);
+                }
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+@section scripts{ 
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+}
+

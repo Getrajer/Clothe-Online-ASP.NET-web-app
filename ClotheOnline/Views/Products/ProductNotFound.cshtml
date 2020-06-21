@@ -1,0 +1,22 @@
+﻿@model int
+@{
+    ViewData["Title"] = "ProductNotFound";
+}
+<head>
+    <link  rel="stylesheet" href="~/css/ErrorPages.css"/>
+</head>
+
+<div class="error">
+<h1>ProductNotFound</h1>
+
+<div class="alert alert-danger mt-2 mb-2">
+    <h4>404 Not Found</h4>
+    <hr />
+    <h5>Product with Id = @Model cannot be found</h5>
+
+</div>
+
+<a class="btn btn-success" asp-action="index" asp-controller="home">
+    Go back to main page
+</a>
+</div>

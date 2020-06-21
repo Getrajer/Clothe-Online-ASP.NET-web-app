@@ -1,0 +1,23 @@
+﻿@model ClotheOnline.Models.Product
+                    
+@{ 
+    var photoPath = "~/images/" + (Model.PhotoPath ?? "noimage.jpeg");
+}
+
+
+<div class="col-lg-4">
+    <div class="product">
+        <div class="product-img">
+            <img asp-append-version="true" class="product-img" src="@photoPath" alt="@Model.Name" />
+        </div>
+
+        <div class="product-desc">
+            <p>Name: @Model.Name</p>
+            <p>Brand: @Model.Brand</p>
+            <p>Price: £@(Model.Price)</p>
+        </div>
+        
+        <a asp-controller="products" asp-action="ProductDetails" asp-route-id="@Model.Id" class="p-btn">Details</a>
+
+    </div>
+</div>

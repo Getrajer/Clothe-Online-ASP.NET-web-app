@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Shorts";
+}
+
+<head>
+    <link href="~/css/producs.css" rel="stylesheet" />
+</head>
+
+@{ 
+    var o = Model;
+}
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Shorts">Shorts</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Skirts">Skirts</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Throusers">Throusers</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Jackets">Jackets</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Tshirts">T-Shirts</a>
+    <a class="nav-link text-dark" asp-controller="Products" asp-action="Dresses">Dresses</a>
+</div>
+
+<span class="category-btn" onclick="openNav()">Categories</span>
+
+
+<div id="main">
+
+    <section id="products-page" class="container">
+        <div class="p-3">
+            <div class="row">
+                @foreach (var p in Model)
+                {
+                    @Html.Partial("_PartialProduct", p);
+                }
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+@section scripts{ 
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+}
+
